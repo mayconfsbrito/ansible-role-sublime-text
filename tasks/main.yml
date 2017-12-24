@@ -1,0 +1,11 @@
+---
+- name: Installing GPG key for Sublime Text
+  command: rpm -v --import https://download.sublimetext.com/sublimehq-rpm-pub.gpg
+  
+- name: Select Channel to Install Sublime Text
+  command: dnf config-manager --add-repo https://download.sublimetext.com/rpm/stable/x86_64/sublime-text.repo
+
+- name: Installing Sublime Text
+  dnf:
+    name: sublime-text
+    state: latest
