@@ -1,15 +1,6 @@
 ---
 language: python
 
-os:
-  - fedora
-
-osx_image: fedora
-
-install:
-    - sudo easy_install pip
-    - sudo pip install ansible
-
 notifications:
     webhooks: https://galaxy.ansible.com/api/v1/notifications/
 
