@@ -1,21 +1,14 @@
 ---
-language: objective-c
+language: python
 
 os:
-  - osx
+  - fedora
 
-osx_image: xcode7
+osx_image: fedora
 
 install:
     - sudo easy_install pip
     - sudo pip install ansible
-    - mkdir -p /tmp/roles
-    - "{ echo '[defaults]'; echo 'roles_path = ../:/tmp/roles'; } >> ansible.cfg"
-    - ansible-galaxy install -f -r tests/requirements.yml -p /tmp/roles
-
-script:
-  - "ansible-playbook -i tests/inventory tests/travis.yml --syntax-check"
-  - "ansible-playbook -i tests/inventory tests/travis.yml --connection=local"
 
 notifications:
     webhooks: https://galaxy.ansible.com/api/v1/notifications/
