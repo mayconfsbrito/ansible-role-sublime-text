@@ -7,13 +7,16 @@ galaxy_info:
   min_ansible_version: 2
 
   platforms:
-   - name: Fedora
-     versions:
-     - all
-     - 25
-     - 26
-     - 57
-  
+  - name: Fedora
+    versions:
+    - 25
+    - 26
+    - 27
+  - name: Ubuntu
+    versions:
+    - trusty
+    - xenial
+    - bionic
   galaxy_tags: []
 
 dependencies: []
