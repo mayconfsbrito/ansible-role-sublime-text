@@ -1,2 +1,3 @@
 ---
-# defaults file for sublime-text
+is_ditro_ubuntu: "{{ ansible_distribution | lower is search('mint') or ansible_distribution | lower is search('ubuntu')}}"
+is_distro_fedora: "{{ ansible_distribution | lower is search('fedora') }}"
